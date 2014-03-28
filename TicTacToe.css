@@ -1,0 +1,30 @@
+body
+{
+	margin:0px;
+	background-color: rgb(62, 250, 84);
+}
+.container
+{
+	height: 600px;
+	width:600px;
+	position: absolute;
+	top:40px;
+	left:630px;
+	bottom:100px;
+}
+.block
+{
+	background-color: #DFA4A4;
+	height: 200px;
+	width: 200px;
+	border: 1px solid black;
+	text-align: center;
+}
+.block:hover
+{
+	background-color: #5AC;
+	height: 200px;
+	width: 200px;
+	border: 1px solid black;
+}
+
