@@ -23,21 +23,34 @@ function win(status)
 {
 	setTimeout(
 	function()
-	{	
-	if(status==1)
-		{//alert("You win");
-	     document.getElementById("body").innerHTML='<div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">You Win</h1></div>';
-		}
-	else if(status==2)
-		{//alert("I win");
-		document.getElementById("body").innerHTML='<div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">I Win</h1></div>';
-		}
-	else if(status==3)
-		{//alert("Draw!");
-		document.getElementById("body").innerHTML='<div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">Match Draw!</h1></div>';
-		}
-	},1000)
-
+  { 
+  document.getElementById('game').style.display='none';
+  if(status==1)
+    {//alert("You win");
+      document.getElementById('uwin').style.display='';
+    }
+  else if(status==2)
+    {//alert("I win");
+      document.getElementById('iwin').style.display='';
+    }
+  else if(status==3)
+    {//alert("Draw!");
+      document.getElementById('draw').style.display='';
+    }
+    document.getElementById('resetgame').onclick = function(){
+      mark=[0,0,0,0,0,0,0,0,0];
+      symbol=[12,13,14,15,16,17,18,19,20];
+      gameover=0;
+      for (var i = 0; i < 9; i++) {
+        mark[i]=0;
+        document.getElementById("block"+(i+1)).innerHTML="";
+      };
+      document.getElementById('uwin').style.display='none';
+      document.getElementById('iwin').style.display='none';
+      document.getElementById('draw').style.display='none';
+      document.getElementById('game').style.display='';
+    }
+  },1000);
 }
 
 function winningstatus()
