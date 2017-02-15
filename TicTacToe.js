@@ -89,6 +89,7 @@ function winningstatus()
 	}
 	return 0;
 }
+
 function markthebox(id)
 {
   
@@ -97,9 +98,16 @@ function markthebox(id)
   //document.write(p);
   if(mark[p-1]==0)
   {
-  	
-  	
-  	id.innerHTML="<img src='dot.png' style='height:100%;width:100%'>";
+  	if(p==1)
+  	    id.innerHTML="<img src='dot.png' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+    else if(p==3)
+        id.innerHTML="<img src='dot.png' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+    else if(p==7)
+        id.innerHTML="<img src='dot.png' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+    else if(p==9)
+        id.innerHTML="<img src='dot.png' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+    else
+        id.innerHTML="<img src='dot.png' style='height:100%;width:100%'>";
   	mark[p-1]=1;
   	symbol[p-1]=0;
 
@@ -129,7 +137,16 @@ function markthebox(id)
   			if(winningstatus())
   			{
   				done=1;
-  				document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
+          if(mm+1==1)
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+          else if(mm+1==3)
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+          else if(mm+1==7)
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+          else if(mm+1==9)
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+          else
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
   				//document.write(mm+1);
   				break;
   			}
@@ -156,7 +173,16 @@ function markthebox(id)
   			if(winningstatus())
   			{
   				done=1;
-  				document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
+  				if(mm+1==1)
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+          else if(mm+1==3)
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+          else if(mm+1==7)
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+          else if(mm+1==9)
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+          else
+              document.getElementById("block"+(mm+1)).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
   				//document.write(mm+1);
   				symbol[mm]=1;
   				break;
@@ -175,7 +201,16 @@ function markthebox(id)
   	{
   		mark[unmarked]=1;
   		symbol[unmarked]=1;
-  		document.getElementById("block"+(unmarked+1)).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
+  		if(unmarked+1==1)
+          document.getElementById("block"+(unmarked+1)).innerHTML="<img src='cross.png' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+      else if(unmarked+1==3)
+          document.getElementById("block"+(unmarked+1)).innerHTML="<img src='cross.png' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+      else if(unmarked+1==7)
+          document.getElementById("block"+(unmarked+1)).innerHTML="<img src='cross.png' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+      else if(unmarked+1==9)
+          document.getElementById("block"+(unmarked+1)).innerHTML="<img src='cross.png' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+      else
+          document.getElementById("block"+(unmarked+1)).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
   	}
 
 
@@ -199,7 +234,16 @@ function markthebox(id)
 var random=Math.floor(Math.random()*9+1);
 
 //document.write(random);
-document.getElementById("block"+random).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
+if(random==1)
+          document.getElementById("block"+(random)).innerHTML="<img src='cross.png' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+      else if(random==3)
+          document.getElementById("block"+(random)).innerHTML="<img src='cross.png' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+      else if(random==7)
+          document.getElementById("block"+(random)).innerHTML="<img src='cross.png' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+      else if(random==9)
+          document.getElementById("block"+(random)).innerHTML="<img src='cross.png' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+      else
+          document.getElementById("block"+(random)).innerHTML="<img src='cross.png' style='height:100%;width:100%'>";
 mark[random-1]=1;
 symbol[random-1]=1;
 

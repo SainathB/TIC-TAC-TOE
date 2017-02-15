@@ -1,31 +1,43 @@
-body
-{
+body {
 	margin:0px;
-	background-color: rgb(62, 250, 84);
-}
-.container
-{
-	height: 600px;
-	width:600px;
-	position: absolute;
-	top:40px;
-	left:630px;
-	bottom:100px;
-}
-.block
-{
-	position: absolute;
-	background-color: #DFA4A4;
+	background-color: #757374;
+} 
+
+#gametitle {
 	height: 200px;
-	width: 200px;
-	border: 1px solid black;
-	text-align: center;
 }
+
+#outer {
+	height: 300px;
+	display: -webkit-flex;
+}
+
+.empty {
+	height: 100%;
+	-webkit-flex : 1;
+}
+
+#game {
+	height: 300px;
+	width: 300px;
+}
+
+.row {
+	border-radius: 10px;
+	display : -webkit-flex;
+	height: 33.33%;
+	width: 100%;
+}
+
+.block {   
+	background-color: aqua;
+	height: 100%;
+	-webkit-flex: 1;
+	border: 1px solid #000;
+}
+
 .block:hover
 {
 	background-color: #5AC;
-	height: 200px;
-	width: 200px;
-	border: 1px solid black;
 }
 
