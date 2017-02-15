@@ -1,10 +1,21 @@
 body {
 	margin:0px;
 	background-color: #757374;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"
 } 
 
 #gametitle {
 	height: 200px;
+	line-height: 200px;
+	width: 100%;
+	text-align: center;
+}
+
+#title {
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	color: aqua;
 }
 
 #outer {
@@ -36,8 +47,17 @@ body {
 	border: 1px solid #000;
 }
 
-.block:hover
-{
+.block:hover {
 	background-color: #5AC;
 }
+
+.over {
+	width: 30%;
+	text-align: center;
+	margin: auto 35% auto 35%;
+}
+
+.message {
+	color: aqua;
+} 
 

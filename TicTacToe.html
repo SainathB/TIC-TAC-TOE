@@ -9,11 +9,10 @@
 </head>
 <body id='body'>
 <div id="gametitle">
-	
+	<h1 id="title">Tic Tac Toe</h1>
 </div>
 <div id="outer">
 <div class="empty">
-	
 </div>
 <div id="game">
 	<div class="row">
@@ -35,10 +34,11 @@
 <div class="empty">
 	
 </div>
-<div>
-<div style="display:none;" id="iwin"><div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">I Win<br><input id="resetgame" type="button" value="Play Again!"></h1></div></div>
-<div style="display:none;" id="uwin"><div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">You Win<br><input id="resetgame" type="button" value="Play Again!"></h1></div></div>
-<div style="display:none;" id="draw"><div style="height:680px;width:100%;background-color:rgb(62, 250, 84);"><h1 style="color:rgb(233, 38, 233);position:absolute;top:200px;left:450px;font-size:100px;font-family:Courier">Match Draw!<br><input id="resetgame" type="button" value="Play Again!"></h1></div></div>
+</div>
+<div style="display:none;" class="over" id="iwin"><h1 class="message">Trump Wins!<br><input type="button" onclick="location.reload();" value="Play Again!"></h1></div>
+<div style="display:none;" class="over" id="uwin"><h1 class="message">Hillary Wins!<br><input type="button" onclick="location.reload();" value="Play Again!"></h1></div>
+<div style="display:none;" class="over" id="draw"><h1 class="message">Match Draw!<br><input type="button" onclick="location.reload();" value="Play Again!"></h1>
+</div>
 <script type="text/javascript" src="TicTacToe.js"></script>
 </body>
 </html>
