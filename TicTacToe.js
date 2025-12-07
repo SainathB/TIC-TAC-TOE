@@ -104,15 +104,15 @@ function markthebox(id) {
   		        if(winningstatus()) {
   		            done=1;
                     if(mm+1==1)
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-top-left-radius: 10px;height:100%;width:100%'>";
                     else if(mm+1==3)
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-top-right-radius: 10px;height:100%;width:100%'>";
                     else if(mm+1==7)
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
                     else if(mm+1==9)
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
                     else
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='height:100%;width:100%'>";
   			        break;
                 }
   			
@@ -132,15 +132,15 @@ function markthebox(id) {
                     if(winningstatus()) {
                         done=1;
                     if(mm+1==1)
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-top-left-radius: 10px;height:100%;width:100%'>";
                     else if(mm+1==3)
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-top-right-radius: 10px;height:100%;width:100%'>";
                     else if(mm+1==7)
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
                     else if(mm+1==9)
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
                     else
-                        document.getElementById("block"+(mm+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='height:100%;width:100%'>";
+                        document.getElementById("block"+(mm+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='height:100%;width:100%'>";
                         symbol[mm]=1;
                         break;
                     }
@@ -155,15 +155,15 @@ function markthebox(id) {
       		mark[unmarked]=1;
       		symbol[unmarked]=1;
       		if(unmarked+1==1)
-                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-top-left-radius: 10px;height:100%;width:100%'>";
             else if(unmarked+1==3)
-                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-top-right-radius: 10px;height:100%;width:100%'>";
             else if(unmarked+1==7)
-                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
             else if(unmarked+1==9)
-                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
             else
-                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='height:100%;width:100%'>";
+                document.getElementById("block"+(unmarked+1)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='height:100%;width:100%'>";
         }
 
       	if(winningstatus()&&gameover==0) {
@@ -180,15 +180,15 @@ function markthebox(id) {
 var random=Math.floor(Math.random()*9+1);
 
 if(random==1)
-    document.getElementById("block"+(random)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-top-left-radius: 10px;height:100%;width:100%'>";
+    document.getElementById("block"+(random)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-top-left-radius: 10px;height:100%;width:100%'>";
 else if(random==3)
-    document.getElementById("block"+(random)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-top-right-radius: 10px;height:100%;width:100%'>";
+    document.getElementById("block"+(random)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-top-right-radius: 10px;height:100%;width:100%'>";
 else if(random==7)
-    document.getElementById("block"+(random)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
+    document.getElementById("block"+(random)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-bottom-left-radius: 10px;height:100%;width:100%'>";
 else if(random==9)
-    document.getElementById("block"+(random)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
+    document.getElementById("block"+(random)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='border-bottom-right-radius: 10px;height:100%;width:100%'>";
 else
-    document.getElementById("block"+(random)).innerHTML="<img src='http://www.fakingnews.firstpost.com/wp-content/uploads/2017/01/donald-trump.jpg' style='height:100%;width:100%'>";
+    document.getElementById("block"+(random)).innerHTML="<img src='https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg' style='height:100%;width:100%'>";
 mark[random-1]=1;
 symbol[random-1]=1;
 
