@@ -1,0 +1,312 @@
+:root {
+  --bg-1: #0f2027;
+  --bg-2: #203a43;
+  --bg-3: #2c5364;
+  --accent: #00e5ff;
+  --accent-dark: #00b8d4;
+  --card: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --cell: #e0f7fa;
+  --cell-hover: #b2ebf2;
+  --win: #ffd54f;
+  --text: #eceff1;
+  --muted: #90a4ae;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3));
+  background-attachment: fixed;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 16px;
+}
+
+.title {
+  margin: 0 0 32px;
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-shadow: 0 0 24px rgba(0, 229, 255, 0.45);
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  animation: pop-in 0.3s ease-out;
+}
+
+/* Setup form */
+
+.mode-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 24px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.mode-toggle button {
+  padding: 10px 8px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mode-toggle button:hover {
+  color: var(--text);
+}
+
+.mode-toggle button.active {
+  color: #00232b;
+  background: var(--accent);
+}
+
+.setup h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.field {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.25);
+}
+
+.setup .btn {
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 12px 20px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  color: #00232b;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(0, 229, 255, 0.35);
+}
+
+.btn.primary:hover {
+  background: var(--accent-dark);
+}
+
+/* Players bar */
+
+.players {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.player {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.player span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.player.active {
+  border-color: var(--accent);
+}
+
+.player.winner {
+  border-color: var(--win);
+  box-shadow: 0 0 14px rgba(255, 213, 79, 0.45);
+}
+
+.vs {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* Board */
+
+.board-wrap {
+  position: relative;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  aspect-ratio: 1;
+}
+
+.cell {
+  padding: 10%;
+  background: var(--cell);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cell:hover:not(:disabled) {
+  background: var(--cell-hover);
+  transform: scale(1.04);
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.cell.win {
+  background: var(--win);
+  animation: pulse 0.8s ease-in-out infinite alternate;
+}
+
+/* The symbol PNGs are black on white; multiply drops the white so the cell colour shows through. */
+.cell img {
+  mix-blend-mode: multiply;
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: pop-in 0.25s ease-out;
+}
+
+.mini-mark {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Result overlay */
+
+.result {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 16px;
+  text-align: center;
+  background: rgba(15, 32, 39, 0.88);
+  border-radius: 12px;
+  animation: fade-in 0.3s ease-out;
+}
+
+.result h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.status {
+  margin: 18px 0 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  from { filter: brightness(1); }
+  to { filter: brightness(1.12); }
+}
